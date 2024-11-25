@@ -25,17 +25,22 @@
         private void btnLogin_Click(object sender, EventArgs e)
         {
             fManager f = new fManager();
-            this.Hide();    
+            this.Hide();
             f.ShowDialog();
             this.Show();
         }
 
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình ?","Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
+        }
+
+        private void txbUserName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
