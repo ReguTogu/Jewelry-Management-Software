@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using QuanLyKinhDoanhVangBacDaQuy.DAO;
 
 namespace QuanLyKinhDoanhVangBacDaQuy
 {
@@ -18,46 +19,63 @@ namespace QuanLyKinhDoanhVangBacDaQuy
             InitializeComponent();
 
             LoadAccountList();
+            LoadServiceList();
+            LoadProductList();
+            LoadProductCategoryList();
+            LoadProviderList();
+            LoadBillList();
+
         }
 
         void LoadAccountList()
         {
-            //Tạo kết nối từ client tới server
-            string connectionSTR = "Data Source=LAPTOP-JU79JM5A;Initial Catalog=QuanLyKinhDoanhVangBacDaQuy;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
-            SqlConnection connection = new SqlConnection(connectionSTR);
-
             //Tạo câu truy vấn
-            string query = "select MaNhanVien as ID, TenNhanVien as Tên, TaiKhoan as Username, MatKhau as Password from NHANVIEN";
-            //string query = "select * from NhanVien";
-            //Mở connection
-            connection.Open();
-            //Thực thi query trên connection
-            SqlCommand command = new SqlCommand(query, connection);
-            //Truyền dữ liệu vào bảng
-            DataTable data = new DataTable();
-            //Lấy dữ liệu từ câu truy vấn
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            string query = "select MaNhanVien as ID, TenNhanVien as Tên, TaiKhoan, MatKhau from NHANVIEN";
+            string query1 = "EXEC Danh_Sach_Nhan_Vien_Theo_ID @MaNhanVien";
 
-            adapter.Fill(data);
-
-            connection.Close();
-
-            dtgvStaff.DataSource = data;
+            dtgvStaff.DataSource = DataProvider.Instance.ExecuteQuery(query1, new object[]{ "3" });
         }
-        private void label1_Click(object sender, EventArgs e)
+
+        void LoadServiceList()
         {
+            //Tạo câu truy vấn
+            string query = "select * from LOAIDICHVU";
 
+            dtgvService.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
 
-        private void dtgvJewelry_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        void LoadProductList()
         {
+            //Tạo câu truy vấn
+            string query = "select * from SANPHAM";
 
+            dtgvProduct.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        void LoadProductCategoryList()
         {
+            //Tạo câu truy vấn
+            string query = "select * from LOAISANPHAM";
 
+            dtgvProductCategory.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
+
+        void LoadProviderList()
+        {
+            //Tạo câu truy vấn
+            string query = "select * from NHACUNGCAP";
+
+            dtgvProvider.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        void LoadBillList()
+        {
+            //Tạo câu truy vấn
+            string query = "select * from LICHSUKHO";
+
+            dtgvBill.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        }
+
 
         private void fAdmin_Load(object sender, EventArgs e)
         {

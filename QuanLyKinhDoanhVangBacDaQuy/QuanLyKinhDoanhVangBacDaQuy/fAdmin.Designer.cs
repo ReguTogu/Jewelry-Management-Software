@@ -654,12 +654,14 @@
             // 
             // dtgvBill
             // 
+            dtgvBill.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvBill.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvBill.Location = new Point(14, 13);
+            dtgvBill.Dock = DockStyle.Fill;
+            dtgvBill.Location = new Point(0, 0);
             dtgvBill.Margin = new Padding(2);
             dtgvBill.Name = "dtgvBill";
             dtgvBill.RowHeadersWidth = 62;
-            dtgvBill.Size = new Size(958, 270);
+            dtgvBill.Size = new Size(990, 302);
             dtgvBill.TabIndex = 0;
             // 
             // panel1
@@ -995,6 +997,7 @@
             // 
             // dtgvProduct
             // 
+            dtgvProduct.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtgvProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvProduct.Location = new Point(12, 10);
             dtgvProduct.Margin = new Padding(2);
@@ -1232,6 +1235,7 @@
             // 
             // dtgvProductCategory
             // 
+            dtgvProductCategory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtgvProductCategory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvProductCategory.Location = new Point(12, 10);
             dtgvProductCategory.Margin = new Padding(2);
@@ -1469,6 +1473,7 @@
             // 
             // dtgvProvider
             // 
+            dtgvProvider.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtgvProvider.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvProvider.Location = new Point(12, 10);
             dtgvProvider.Margin = new Padding(2);
@@ -1929,6 +1934,7 @@
             // 
             // dtgvService
             // 
+            dtgvService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtgvService.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvService.Location = new Point(12, 10);
             dtgvService.Margin = new Padding(2);

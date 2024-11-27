@@ -228,3 +228,12 @@ select * from SANPHAM
 --use master
 --ALTER DATABASE QuanLyKinhDoanhVangBacDaQuy SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 --DROP DATABASE QuanLyKinhDoanhVangBacDaQuy;
+
+CREATE PROCEDURE Danh_Sach_Nhan_Vien_Theo_ID @MaNhanVien int
+AS
+BEGIN
+    SELECT * FROM NHANVIEN WHERE MaNhanVien = @MaNhanVien;
+END;
+GO
+
+EXEC Danh_Sach_Nhan_Vien_Theo_ID @MaNhanVien = 1
