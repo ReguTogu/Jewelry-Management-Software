@@ -19,11 +19,11 @@ namespace QuanLyKinhDoanhVangBacDaQuy
             InitializeComponent();
 
             LoadAccountList();
-            LoadServiceList();
-            LoadProductList();
-            LoadProductCategoryList();
-            LoadProviderList();
-            LoadBillList();
+            //LoadServiceList();
+            //LoadProductList();
+            //LoadProductCategoryList();
+            //LoadProviderList();
+            //LoadBillList();
 
         }
 
@@ -33,48 +33,48 @@ namespace QuanLyKinhDoanhVangBacDaQuy
             string query = "select MaNhanVien as ID, TenNhanVien as Tên, TaiKhoan, MatKhau from NHANVIEN";
             string query1 = "EXEC Danh_Sach_Nhan_Vien_Theo_ID @MaNhanVien";
 
-            dtgvStaff.DataSource = DataProvider.Instance.ExecuteQuery(query1, new object[]{ "3" });
+            dtgvStaff.DataSource = DataProvider.Instance.ExecuteQuery(query1, new object[] { "3" });
         }
 
-        void LoadServiceList()
-        {
-            //Tạo câu truy vấn
-            string query = "select * from LOAIDICHVU";
+        //void LoadServiceList()
+        //{
+        //    //Tạo câu truy vấn
+        //    string query = "select * from LOAIDICHVU";
 
-            dtgvService.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
+        //    dtgvService.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        //}
 
-        void LoadProductList()
-        {
-            //Tạo câu truy vấn
-            string query = "select * from SANPHAM";
+        //void LoadProductList()
+        //{
+        //    //Tạo câu truy vấn
+        //    string query = "select * from SANPHAM";
 
-            dtgvProduct.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
+        //    dtgvProduct.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        //}
 
-        void LoadProductCategoryList()
-        {
-            //Tạo câu truy vấn
-            string query = "select * from LOAISANPHAM";
+        //void LoadProductCategoryList()
+        //{
+        //    //Tạo câu truy vấn
+        //    string query = "select * from LOAISANPHAM";
 
-            dtgvProductCategory.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
+        //    dtgvProductCategory.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        //}
 
-        void LoadProviderList()
-        {
-            //Tạo câu truy vấn
-            string query = "select * from NHACUNGCAP";
+        //void LoadProviderList()
+        //{
+        //    //Tạo câu truy vấn
+        //    string query = "select * from NHACUNGCAP";
 
-            dtgvProvider.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
+        //    dtgvProvider.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        //}
 
-        void LoadBillList()
-        {
-            //Tạo câu truy vấn
-            string query = "select * from LICHSUKHO";
+        //void LoadBillList()
+        //{
+        //    //Tạo câu truy vấn
+        //    string query = "select * from LICHSUKHO";
 
-            dtgvBill.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
+        //    dtgvBill.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        //}
 
 
         private void fAdmin_Load(object sender, EventArgs e)

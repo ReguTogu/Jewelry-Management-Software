@@ -33,10 +33,10 @@
             btnLogin = new Button();
             panel3 = new Panel();
             txbPassWord = new TextBox();
-            label2 = new Label();
+            labelMatKhau = new Label();
             panel2 = new Panel();
             txbUserName = new TextBox();
-            label1 = new Label();
+            labelTaiKhoan = new Label();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -63,7 +63,7 @@
             btnExit.TabIndex = 3;
             btnExit.Text = "Đăng xuất";
             btnExit.UseVisualStyleBackColor = true;
-            btnExit.Click += button1_Click;
+            btnExit.Click += btnExit_Click;
             // 
             // btnLogin
             // 
@@ -79,7 +79,7 @@
             // panel3
             // 
             panel3.Controls.Add(txbPassWord);
-            panel3.Controls.Add(label2);
+            panel3.Controls.Add(labelMatKhau);
             panel3.Location = new Point(48, 166);
             panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
@@ -95,21 +95,20 @@
             txbPassWord.TabIndex = 1;
             txbPassWord.UseSystemPasswordChar = true;
             // 
-            // label2
+            // labelMatKhau
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(67, 22);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(70, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Mật khẩu";
-            label2.Click += label2_Click;
+            labelMatKhau.AutoSize = true;
+            labelMatKhau.Location = new Point(67, 22);
+            labelMatKhau.Margin = new Padding(2, 0, 2, 0);
+            labelMatKhau.Name = "labelMatKhau";
+            labelMatKhau.Size = new Size(70, 20);
+            labelMatKhau.TabIndex = 0;
+            labelMatKhau.Text = "Mật khẩu";
             // 
             // panel2
             // 
             panel2.Controls.Add(txbUserName);
-            panel2.Controls.Add(label1);
+            panel2.Controls.Add(labelTaiKhoan);
             panel2.Location = new Point(48, 80);
             panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
@@ -125,16 +124,15 @@
             txbUserName.TabIndex = 0;
             txbUserName.TextChanged += txbUserName_TextChanged;
             // 
-            // label1
+            // labelTaiKhoan
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(67, 25);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(71, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Tài khoản";
-            label1.Click += label1_Click;
+            labelTaiKhoan.AutoSize = true;
+            labelTaiKhoan.Location = new Point(67, 25);
+            labelTaiKhoan.Margin = new Padding(2, 0, 2, 0);
+            labelTaiKhoan.Name = "labelTaiKhoan";
+            labelTaiKhoan.Size = new Size(71, 20);
+            labelTaiKhoan.TabIndex = 0;
+            labelTaiKhoan.Text = "Tài khoản";
             // 
             // LoginForm
             // 
@@ -161,10 +159,10 @@
 
         private Panel panel1;
         private Panel panel2;
-        private Label label1;
+        private Label labelTaiKhoan;
         private Panel panel3;
         private TextBox txbPassWord;
-        private Label label2;
+        private Label labelMatKhau;
         private TextBox txbUserName;
         private Button btnLogin;
         private Button btnExit;

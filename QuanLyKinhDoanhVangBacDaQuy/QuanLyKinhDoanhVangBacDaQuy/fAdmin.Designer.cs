@@ -781,7 +781,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(22, 25);
+            label7.Location = new Point(11, 25);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(164, 20);

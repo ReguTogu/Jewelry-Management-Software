@@ -157,9 +157,9 @@ VALUES
 
 INSERT INTO NHANVIEN(MaNhanVien, TenNhanVien, TaiKhoan, MatKhau, ChucVu)
 VALUES
-    (1, N'Nguyễn Thị Ánh', 'nguyenthianh', 'nta', N'Nhân viên bán hàng'),
-	(2, N'Cao Bảo Hà', 'caobaoha', 'cbh', N'Nhân viên thu ngân'),
-    (3, N'Trần Nhật Long', 'trannhatlong', 'tnl', N'Quản lý');
+    (1, N'Nguyễn Thị Ánh', N'nguyenthianh', N'nta', N'Nhân viên bán hàng'),
+	(2, N'Cao Bảo Hà', N'caobaoha', N'cbh', N'Nhân viên thu ngân'),
+    (3, N'Trần Nhật Long', N'trannhatlong', N'tnl', N'Quản lý');
 
 INSERT INTO KHACHHANG(MaKhachHang, SoDienThoai,TenKhachHang)
 VALUES
@@ -168,7 +168,7 @@ VALUES
     (3, '0913554321', N'Huỳnh Anh Minh'),
     (4, '0913123456', N'Trần Minh Hiếu');
 
-INSERT INTO LOAISANPHAM (MaLoaiSP, TenLoaiSanPham,DonViTinh, LoiNhuan)
+INSERT INTO LOAISANPHAM (MaLoaiSP, TenLoaiSanPham, DonViTinh, LoiNhuan)
 VALUES
     (1, N'Dây chuyền kim cương', N'chiếc', 25 ),
     (2, N'Nhẫn vàng', N'chiếc', 30),
@@ -229,6 +229,7 @@ select * from SANPHAM
 --ALTER DATABASE QuanLyKinhDoanhVangBacDaQuy SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 --DROP DATABASE QuanLyKinhDoanhVangBacDaQuy;
 
+GO
 CREATE PROCEDURE Danh_Sach_Nhan_Vien_Theo_ID @MaNhanVien int
 AS
 BEGIN
@@ -237,3 +238,12 @@ END;
 GO
 
 EXEC Danh_Sach_Nhan_Vien_Theo_ID @MaNhanVien = 1
+
+GO
+CREATE PROC USP_Login
+@TaiKhoan nvarchar(50), @MatKhau nvarchar(50)
+AS
+BEGIN
+	SELECT * FROM NHANVIEN WHERE TaiKhoan = @TaiKhoan And MatKhau = @MatKhau
+END
+Go

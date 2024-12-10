@@ -64,5 +64,15 @@ namespace QuanLyKinhDoanhVangBacDaQuy
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, panel1.ClientRectangle,
+            Color.DarkGray, 1, ButtonBorderStyle.Solid, // Trái
+            Color.DarkGray, 1, ButtonBorderStyle.Solid, // Trên
+            Color.DarkGray, 1, ButtonBorderStyle.Solid, // Phải
+            Color.DarkGray, 1, ButtonBorderStyle.Solid // Dưới
+            );
+        }
     }
 }

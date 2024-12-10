@@ -27,7 +27,7 @@ namespace QuanLyKinhDoanhVangBacDaQuy.DAO
                 }
                 
             }
-             private set => instance = value;
+            private set { instance = value; }
         }
 
         private DataProvider() { }
@@ -64,9 +64,9 @@ namespace QuanLyKinhDoanhVangBacDaQuy.DAO
                 connection.Close();
             }    
             return data;
-        }
+        } // trả ra dòng kết quả 
 
-        public int ExecuteNonQuery(string query, object[] parameter = null) //trả về số dòng thành công
+        public int ExecuteNonQuery(string query, object[] parameter = null) //trả về số dòng được insert delete update
         {
             int dataDone = 0;
             using (SqlConnection connection = new SqlConnection(connectionSTR)) //tự giải phóng dữ liệu khai báo
