@@ -74,5 +74,25 @@ namespace QuanLyKinhDoanhVangBacDaQuy
             Color.DarkGray, 1, ButtonBorderStyle.Solid // Dưới
             );
         }
+
+        private void labelPhieuBH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView3_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
