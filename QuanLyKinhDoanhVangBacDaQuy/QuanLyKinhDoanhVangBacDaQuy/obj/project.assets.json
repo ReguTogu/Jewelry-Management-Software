@@ -1848,23 +1848,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\CsharpProject\\Jewelry-Management-Software\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy.csproj",
+      "projectUniqueName": "D:\\THUCHANH\\NMCNPM\\Jewelry-Management-Software\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy.csproj",
       "projectName": "QuanLyKinhDoanhVangBacDaQuy",
-      "projectPath": "E:\\CsharpProject\\Jewelry-Management-Software\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\CsharpProject\\Jewelry-Management-Software\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy\\obj\\",
+      "projectPath": "D:\\THUCHANH\\NMCNPM\\Jewelry-Management-Software\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "D:\\THUCHANH\\NMCNPM\\Jewelry-Management-Software\\QuanLyKinhDoanhVangBacDaQuy\\QuanLyKinhDoanhVangBacDaQuy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
