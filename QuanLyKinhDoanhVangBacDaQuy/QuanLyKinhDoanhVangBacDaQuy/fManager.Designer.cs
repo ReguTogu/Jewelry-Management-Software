@@ -95,6 +95,7 @@
             tpKhachHang = new TabPage();
             panel47 = new Panel();
             panel49 = new Panel();
+            textBox5 = new TextBox();
             label32 = new Label();
             panel50 = new Panel();
             txbServiceName = new TextBox();
@@ -107,7 +108,14 @@
             panel54 = new Panel();
             btnShowService = new Button();
             btnAddService = new Button();
-            textBox5 = new TextBox();
+            columnHeader17 = new ColumnHeader();
+            columnHeader18 = new ColumnHeader();
+            columnHeader31 = new ColumnHeader();
+            columnHeader32 = new ColumnHeader();
+            columnHeader33 = new ColumnHeader();
+            columnHeader34 = new ColumnHeader();
+            columnHeader35 = new ColumnHeader();
+            columnHeader36 = new ColumnHeader();
             menuStrip1.SuspendLayout();
             tcManager.SuspendLayout();
             tbThanhToan.SuspendLayout();
@@ -195,7 +203,7 @@
             tbThanhToan.Controls.Add(panel2);
             tbThanhToan.Location = new Point(4, 34);
             tbThanhToan.Name = "tbThanhToan";
-            tbThanhToan.Size = new Size(1010, 519);
+            tbThanhToan.Size = new Size(1214, 612);
             tbThanhToan.TabIndex = 4;
             tbThanhToan.Text = "Thanh toán";
             tbThanhToan.UseVisualStyleBackColor = true;
@@ -228,12 +236,14 @@
             // 
             // listView1
             // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader33, columnHeader34, columnHeader35, columnHeader36 });
             listView1.Location = new Point(25, 19);
             listView1.Margin = new Padding(2);
             listView1.Name = "listView1";
             listView1.Size = new Size(441, 275);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
             // 
             // panel4
             // 
@@ -378,19 +388,21 @@
             // 
             // lsvBill
             // 
+            lsvBill.Columns.AddRange(new ColumnHeader[] { columnHeader17, columnHeader18, columnHeader31, columnHeader32 });
             lsvBill.Location = new Point(25, 19);
             lsvBill.Margin = new Padding(2);
             lsvBill.Name = "lsvBill";
             lsvBill.Size = new Size(441, 275);
             lsvBill.TabIndex = 0;
             lsvBill.UseCompatibleStateImageBehavior = false;
+            lsvBill.View = View.Details;
             // 
             // tpPhieuBanHang
             // 
             tpPhieuBanHang.Controls.Add(listView2);
             tpPhieuBanHang.Location = new Point(4, 34);
             tpPhieuBanHang.Name = "tpPhieuBanHang";
-            tpPhieuBanHang.Size = new Size(1010, 519);
+            tpPhieuBanHang.Size = new Size(1214, 612);
             tpPhieuBanHang.TabIndex = 0;
             tpPhieuBanHang.Text = "Phiếu bán hàng";
             tpPhieuBanHang.UseVisualStyleBackColor = true;
@@ -446,7 +458,7 @@
             tpPhieuNhapHang.Controls.Add(listView3);
             tpPhieuNhapHang.Location = new Point(4, 34);
             tpPhieuNhapHang.Name = "tpPhieuNhapHang";
-            tpPhieuNhapHang.Size = new Size(1010, 519);
+            tpPhieuNhapHang.Size = new Size(1214, 612);
             tpPhieuNhapHang.TabIndex = 0;
             tpPhieuNhapHang.Text = "Phiếu nhập hàng";
             tpPhieuNhapHang.UseVisualStyleBackColor = true;
@@ -503,7 +515,7 @@
             tpTraCuuDichVu.Controls.Add(listView4);
             tpTraCuuDichVu.Location = new Point(4, 34);
             tpTraCuuDichVu.Name = "tpTraCuuDichVu";
-            tpTraCuuDichVu.Size = new Size(1010, 519);
+            tpTraCuuDichVu.Size = new Size(1214, 612);
             tpTraCuuDichVu.TabIndex = 1;
             tpTraCuuDichVu.Text = "Tra cứu dịch vụ";
             tpTraCuuDichVu.UseVisualStyleBackColor = true;
@@ -541,7 +553,7 @@
             tpPhieuDichVu.Controls.Add(listView5);
             tpPhieuDichVu.Location = new Point(4, 34);
             tpPhieuDichVu.Name = "tpPhieuDichVu";
-            tpPhieuDichVu.Size = new Size(1010, 519);
+            tpPhieuDichVu.Size = new Size(1214, 612);
             tpPhieuDichVu.TabIndex = 2;
             tpPhieuDichVu.Text = "Phiếu dịch vụ";
             tpPhieuDichVu.UseVisualStyleBackColor = true;
@@ -603,7 +615,7 @@
             tpBaoCaoTonKho.Controls.Add(listView6);
             tpBaoCaoTonKho.Location = new Point(4, 34);
             tpBaoCaoTonKho.Name = "tpBaoCaoTonKho";
-            tpBaoCaoTonKho.Size = new Size(1010, 519);
+            tpBaoCaoTonKho.Size = new Size(1214, 612);
             tpBaoCaoTonKho.TabIndex = 3;
             tpBaoCaoTonKho.Text = "Báo cáo tồn kho";
             tpBaoCaoTonKho.UseVisualStyleBackColor = true;
@@ -687,6 +699,14 @@
             panel49.Name = "panel49";
             panel49.Size = new Size(595, 81);
             panel49.TabIndex = 3;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(174, 25);
+            textBox5.Margin = new Padding(2);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(344, 31);
+            textBox5.TabIndex = 2;
             // 
             // label32
             // 
@@ -804,13 +824,47 @@
             btnAddService.Text = "Thêm";
             btnAddService.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // columnHeader17
             // 
-            textBox5.Location = new Point(174, 25);
-            textBox5.Margin = new Padding(2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(344, 31);
-            textBox5.TabIndex = 2;
+            columnHeader17.Text = "Mã sản phẩm";
+            columnHeader17.Width = 125;
+            // 
+            // columnHeader18
+            // 
+            columnHeader18.Text = "Tên ";
+            columnHeader18.TextAlign = HorizontalAlignment.Center;
+            // 
+            // columnHeader31
+            // 
+            columnHeader31.Text = "Số lượng";
+            columnHeader31.TextAlign = HorizontalAlignment.Center;
+            columnHeader31.Width = 100;
+            // 
+            // columnHeader32
+            // 
+            columnHeader32.Text = "Đơn giá";
+            columnHeader32.Width = 100;
+            // 
+            // columnHeader33
+            // 
+            columnHeader33.Text = "Mã dịch vụ";
+            // 
+            // columnHeader34
+            // 
+            columnHeader34.Text = "Tên dịch vụ";
+            columnHeader34.Width = 100;
+            // 
+            // columnHeader35
+            // 
+            columnHeader35.Text = "Số lượng";
+            columnHeader35.TextAlign = HorizontalAlignment.Center;
+            columnHeader35.Width = 100;
+            // 
+            // columnHeader36
+            // 
+            columnHeader36.Text = "Đơn giá";
+            columnHeader36.TextAlign = HorizontalAlignment.Center;
+            columnHeader36.Width = 100;
             // 
             // fManager
             // 
@@ -937,5 +991,13 @@
         private Button btnShowService;
         private Button btnAddService;
         private TextBox textBox5;
+        private ColumnHeader columnHeader33;
+        private ColumnHeader columnHeader34;
+        private ColumnHeader columnHeader35;
+        private ColumnHeader columnHeader36;
+        private ColumnHeader columnHeader17;
+        private ColumnHeader columnHeader18;
+        private ColumnHeader columnHeader31;
+        private ColumnHeader columnHeader32;
     }
 }
